@@ -1,6 +1,33 @@
 import styled from "styled-components";
 
-import "./App.css";
+/**
+ *  This is the styled component for the Card component.
+ *  jsx is on the top of the file followed by the styled component.
+ */
+
+function Card({ cardDetails }) {
+  const { name, first12Numbers, last4Numbers, cvv, expiryDate } = cardDetails;
+  return (
+    <Wrapper>
+      <Name>{name}</Name>
+      <CardNumber>{`${first12Numbers} ${last4Numbers}`}</CardNumber>
+
+      <ExpiryAndCvvContainer>
+        <ExpiryContainer>
+          <ExpiryAndCvvText>VALID THRU</ExpiryAndCvvText>
+          <ExpiryAndCvvValue>{expiryDate}</ExpiryAndCvvValue>
+        </ExpiryContainer>
+
+        <ExpiryContainer>
+          <ExpiryAndCvvText>CVV</ExpiryAndCvvText>
+          <ExpiryAndCvvValue>{cvv}</ExpiryAndCvvValue>
+        </ExpiryContainer>
+      </ExpiryAndCvvContainer>
+    </Wrapper>
+  );
+}
+
+export default Card;
 
 const Wrapper = styled.div`
   width: 327px;
@@ -26,7 +53,7 @@ const Name = styled.h1`
   font-weight: normal;
 `;
 
-const CardNnumber = styled.h1`
+const CardNumber = styled.h1`
   font-size: 20px;
   line-height: 18px;
   color: #ffffff;
@@ -64,27 +91,3 @@ const ExpiryAndCvvValue = styled.h1`
   font-weight: bold;
   margin-top: 2px;
 `;
-
-function Card({ cardDetails }) {
-  const { name, first12Nums, last4Nums, cvv, expiryDate } = cardDetails;
-  return (
-    <Wrapper>
-      <Name>{name}</Name>
-      <CardNnumber>{`${first12Nums} ${last4Nums}`}</CardNnumber>
-
-      <ExpiryAndCvvContainer>
-        <ExpiryContainer>
-          <ExpiryAndCvvText>VALID THRU</ExpiryAndCvvText>
-          <ExpiryAndCvvValue>{expiryDate}</ExpiryAndCvvValue>
-        </ExpiryContainer>
-
-        <ExpiryContainer>
-          <ExpiryAndCvvText>CVV</ExpiryAndCvvText>
-          <ExpiryAndCvvValue>{cvv}</ExpiryAndCvvValue>
-        </ExpiryContainer>
-      </ExpiryAndCvvContainer>
-    </Wrapper>
-  );
-}
-
-export default Card;
