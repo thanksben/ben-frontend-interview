@@ -12,7 +12,6 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-
     "lib": ["ES2021", "DOM"],
     "target": "ES2021",
     "rootDir": ".",
@@ -22,16 +21,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-
     "module": "esnext",
-
-    "types": [
-      "node",
-      "jest",
-      "@testing-library/jest-dom",
-      "webpack-env",
-      "styled-components"
-    ],
+    "types": ["node", "jest", "@testing-library/jest-dom", "styled-components"],
 
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
