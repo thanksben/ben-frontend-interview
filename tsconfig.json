@@ -3,7 +3,7 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "allowJs": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
@@ -23,7 +23,6 @@
     "importHelpers": true,
     "module": "esnext",
     "types": ["node", "jest", "@testing-library/jest-dom", "styled-components"],
-
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "resolveJsonModule": true

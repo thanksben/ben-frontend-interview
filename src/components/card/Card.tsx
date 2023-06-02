@@ -2,10 +2,22 @@ import styled from "styled-components";
 
 /**
  *  This is the styled component for the Card component.
- *  jsx is on the top of the file followed by the styled component.
+ *  interfaces are on the top of the file, followed by jsx followed by the styled components.
  */
 
-function Card({ cardDetails }) {
+interface ICardDetails {
+  name: string;
+  first12Numbers: string;
+  last4Numbers: string;
+  cvv: string;
+  expiryDate: string;
+}
+
+interface ICard {
+  cardDetails: ICardDetails;
+}
+
+function Card({ cardDetails }: ICard) {
   const { name, first12Numbers, last4Numbers, cvv, expiryDate } = cardDetails;
   return (
     <Wrapper>
