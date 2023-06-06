@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Card from "./components/card/Card";
 
 function App() {
-
   /**
    * This is the data that will be passed to the Card component.
    * In real life, this data will be fetched from the backend.
@@ -19,7 +18,7 @@ function App() {
     <CardContainer>
       <Card cardDetails={cardDetails} />
       <SwitchContainer>
-        <label class="switch">
+        <label className="switch">
           <input type="checkbox" checked aria-label="toggle" />
         </label>
       </SwitchContainer>
